@@ -1,0 +1,42 @@
+{% extends 'blogs/blogs_base.html' %}
+{% load highlight %}
+
+{% block post %}
+<div class="search-result">
+{% if query %}
+    <ul class="post-list">
+
+    {% for result in page.object_list %}
+      <li class="post-list-item">
+        <article class="card z-depth-0 article-type-post">
+          <h5 class="post-title" itemprop="name">
+            <a class="post-title-link" href="{{ result.object.get_absolute_url }}">{% highlight result.object.title with query %}</a>
+          </h5>
+          <div class="post-content" id="post-content" itemprop="postContent">
+            {% highlight result.object.summary with query max_length 200 %}
+            <a href="{{ result.object.get_absolute_url }}" class="post-more waves-effect waves-button">
+              ...阅读全文
+            </a>
+          </div>
+        </article>
+      </li>
+    {% empty %}
+        <p>No results found.</p>
+    {% endfor %}
+    </ul>
+    {% if page.has_previous or page.has_next %}
+        <div class="pagination">
+            {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+            |
+            {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+        </div>
+    {% endif %}
+{% else %}
+    {# Show some example queries to run, maybe query syntax, something else? #}
+{% endif %}
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include '_macro/sidebar_index.html' %}
+{% endblock %}

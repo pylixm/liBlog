@@ -1,0 +1,57 @@
+{% extends "blogs/blogs_base.html" %}
+{% load i18n %}
+{% load md2 %}
+{% load comments %}
+{% load comments_xtd %}
+{% load licomments %}
+
+{% block title %}{% trans "Comment reply" %}{% endblock %}
+
+{% block post %}
+<div class="card-panel z-depth-0 post-card post-comments">
+  <div class="text-center">
+    <a href="{{ comment.content_object.get_absolute_url }}">{{ comment.content_object }}</a>
+  </div>
+  <h5 class="left-align">回复评论</h5>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="col s12">
+      <div class="media mt15 ">
+        <div class="media-left">
+        {% with avatar_url=comment.user.socialaccount_set.all.0.get_avatar_url %}
+        {% if avatar_url %}
+        <img src="{{ comment.user.socialaccount_set.all.0.get_avatar_url }}"
+          width="48" height="48"/>
+          </a>
+          {% else %}
+          {{ comment.user_email|xtd_comment_gravatar:'48,retro' }}
+          {% endif %}
+        {% endwith %}
+        </div>
+        <div class="media-body">
+        <div class="comment">
+          <h6 class="media-heading">
+            {% if comment.user_url %}
+            <a href="{{ comment.user_url }}" target="_new">{% endif %}
+            {{ comment.user_name }}{% if comment.user_url %}</a>{% endif %}
+            - {{ comment.submit_date|conver_date }}
+          </h6>
+          <div class="content">{{ comment.comment|markdown:"safe, code-friendly, code-color" }}</div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="comment">
+    {% include "../comments/form.html" %}
+  </div>
+</div>
+{% endblock %}
+
+
+{% block sidebar %}
+  {% include '_macro/sidebar_index.html' %}
+{% endblock %}

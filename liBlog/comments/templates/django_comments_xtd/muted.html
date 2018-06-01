@@ -1,0 +1,11 @@
+{% extends "/base.html" %}
+{% load i18n %}
+
+{% block title %}邮件退订{% endblock %}
+
+{% block content %}
+<h4 class="text-center">您已成功取消评论提醒。</h4>
+<p>
+您将不会再收到有关文章 [<a href="{{ content_object.get_absolute_url }}">{{ content_object }}</a>] 的评论提醒邮件。
+</p>
+{% endblock %}

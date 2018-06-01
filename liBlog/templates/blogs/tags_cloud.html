@@ -1,0 +1,28 @@
+{% extends 'blogs/blogs_base.html' %}
+
+{% block post %}
+<div class="card z-depth-0 post-card">
+  <div class="card-content">
+    <div class="card-title">
+      所有标签
+    </div>
+    <div class="archive">
+      <dl class="dl-horizontal">
+        <ul class="tagcloud">
+          {% for tag in tag_list %}
+          <li class="tag-{{ tag.tag_css }}">
+            <a href="{% url 'tag' tag.name %}">
+              {{ tag.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dl>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include '_macro/sidebar_index.html' %}
+{% endblock %}

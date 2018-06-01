@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col m4">
+    {% if page_obj.has_previous %}
+      <a href="/?page={{ page_obj.previous_page_number }}" class="btn-flat left waves-effect">上一页</a>
+    {% else %}
+      <a class="btn-flat left waves-effect disabled">上一页</a>
+    {% endif %}
+  </div>
+  <div class="col m4 text-center "><span class="indigo-text text-lighten-1">{{page_obj.number}}/{{paginator.num_pages}}</span></div>
+  <div class="col m4">
+    {% if page_obj.has_next %}
+      <a href="/?page={{ page_obj.next_page_number }}" class="btn-flat right waves-effect">下一页</a>
+    {% else %}
+      <a class="btn-flat right waves-effect disabled">下一页</a>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{% extends 'blogs/blogs_base.html' %}
+
+{% block post %}
+<div class="card z-depth-0 post-card">
+  <div class="card-content">
+    <div class="card-title">
+      标签
+    </div>
+    <div class="archive">
+      <ul>
+        {% for tag in tag_list %}
+          <li>
+            <h2><a href="{% url 'tag' tag.name %}">{{ tag.name }}</a></h2>
+            <dl class="dl-horizontal">
+              {% for post in tag.post_list.all %}
+                <dt><span>{{ post.publish_time|date:'Y-m-d' }}</span></dt>
+                <dd><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></dd>
+              {% endfor %}
+            </dl>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include '_macro/sidebar_index.html' %}
+{% endblock %}

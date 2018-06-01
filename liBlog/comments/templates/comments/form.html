@@ -1,0 +1,80 @@
+{% load i18n %}
+{% load comments %}
+
+{% if request.user.is_authenticated %}
+<form method="POST" action="{% comment_form_target %}" >
+  {% csrf_token %}
+    <input type="hidden" name="next" value="{% url 'comments-xtd-sent' %}"/>
+    
+    <div class="alert alert-danger hidden" data-comment-element="errors">
+    </div>
+
+    {% for field in form %}
+      {% if field.is_hidden %}<div>{{ field }}</div>{% endif %}
+    {% endfor %}
+
+    <div style="display:none">{{ form.honeypot }}</div>
+
+    {% if not request.user.is_authenticated %}
+    <div class="row">
+      <div class="input-field col s6">
+        <label for="id_name" class="active">{{ form.name.label }}</label>
+        {{ form.name }}
+      </div>
+      <div class="input-field col s6">
+        <label for="id_email" class="active">{{ form.email.label }}</label>
+        {{ form.email }}
+        <span class="help-block">{{ form.email.help_text }}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="id_url" class="active">{{ form.url.label }}</label>
+        {{ form.url }}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="row ">
+      <div class="input-field col s12">
+        {{ form.comment }}
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="input-field col s6 right-align">
+        <input type="submit" name="post" value="提交" class="btn btn-primary indigo" />
+      </div>
+      <div class="col s6">
+        <p class="left-align">
+          <label>
+             {{ form.followup }}
+            <span>{{ form.followup.label }}</span>
+          </label>
+        </p>
+      </div>
+    </div>
+</form>
+{% else %}
+<div class="card-panel z-depth-0 ">
+  <div class="text-center">登录后评论</div>
+  <div class="row mt10">
+      <div class="col s6 right-align">
+        <span class="weibo">
+          <a href="/accounts/weibo/login/" class="login-icon">
+                      <i class="fa fa-weibo" aria-hidden="true"></i>
+                  </a>
+        </span>
+      </div>
+      <div class="col s6">
+        <span class="github">
+          <a href="/accounts/github/login/" class="login-icon">
+              <i class="mdi mdi-github-circle"  aria-hidden="true"></i>
+          </a>
+        </span>
+      </div>
+  </div>
+</div>
+{% endif %}

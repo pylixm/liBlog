@@ -1,0 +1,33 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "==1.11.5"
+PyMySQL = "*"
+pip = "*"
+django-baker = "*"
+django-ckeditor = "*"
+Pillow = "==4.2.1"
+django-environ = "==0.4.4"
+whitenoise = "==3.3.1"
+django-crispy-forms = "*"
+django-model-utils = "==3.0.0"
+"argon2_cffi" = "==16.3.0"
+django-allauth = "==0.33.0"
+"psycopg2" = "==2.7.3.1"
+awesome-slugify = "==1.6.5"
+pytz = "==2017.2"
+django-redis = "==4.8.0"
+redis = ">=2.10.5"
+celery = "==3.1.25"
+rcssmin = "==1.0.6"
+django_compressor = "==2.2"
+django-debug-toolbar = "*"
+
+[dev-packages]
+django-debug-toolbar = "*"
+
+[requires]
+python_version = "3.6"

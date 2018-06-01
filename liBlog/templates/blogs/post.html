@@ -1,0 +1,111 @@
+{% extends 'blogs/blogs_base.html' %}
+{% load static %}
+{% load i18n %}
+{% load comments %}
+{% load comments_xtd %}
+{% block css %}
+  <link href="/static/css/editormd.preview.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block post %}
+<div class="card-panel z-depth-0 post-card">
+  <h2 class="post-card-title">{{ post.title }}</h2>
+  <div class="post-meta">
+    <time class="post-time">{{ post.publish_time|date:'Y-m-d H:i:s'}}</time>
+    <ul class="article-category-list">
+      <li class="article-category-list-item"><a
+          class="article-category-list-link"
+          href="{% url 'category' post.category.name %}">{{ post.category.name }}</a></li>
+    </ul>
+    <span id="/posts/2017-10-29-Docker-use_in_pycharm.html"
+          class="leancloud_visitors" data-flag-title="{{ post.title }}">
+            <span>阅读</span>
+        <span class="leancloud-visitors-count">{{ post.view_count }}</span>
+    </span>
+  </div>
+
+  <div class="post-content" id="post-content" itemprop="postContent">
+    {{  post.content|safe }}
+  </div>
+  <blockquote class="post-copyright ">
+    <div class="content">
+    <span class="post-time">
+        最后更新时间：<time >{{ post.update_time|date:'Y-m-d H:i:s' }}</time>
+    </span><br>
+        转载请保留本文链接：
+        <a href="" target="_blank" >http://pylixm.cc{{ post.get_absolute_url }}</a>
+    </div>
+    <footer>
+      <a href="http://pylixm.cc">
+        <img src="{{ site.author_avatar }}" alt="{{ site.author }}">
+        {{ site.author }}
+      </a>
+    </footer>
+  </blockquote>
+  <div class="post-footer">
+    <ul class="article-tag-list">
+      {% for tag in post.get_tags %}
+      <li class="article-tag-list-item"><a
+          class="article-tag-list-link waves-effect waves-button"
+          href="{% url 'tag' tag %}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div id="comments" class="card-panel z-depth-0 post-comments ">
+  {% if object.allow_comments %}
+  <div class="comment">
+    <h5>您的评论</h5>
+    <div class="divider"></div>
+    {% render_comment_form for object  %}
+  </div>
+  {% else %}
+  <h5 class="text-center">这篇文章评论已关闭。</h5>
+  {% endif %}
+
+  {% get_comment_count for object as comment_count %}
+  {% if comment_count %}
+    <h5>共{{ comment_count }}条评论</h5>
+  <div class="divider"></div>
+  {% endif %}
+
+  {% if comment_count %}
+  <div id="comment-list">
+    <ul id="comments" class="media-list">
+     {% render_xtdcomment_tree  for object  %}
+    </ul>
+  </div>
+  {% endif %}
+
+
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+  <div class="sidebar pushpin">
+    <div class="card z-depth-0 ">
+      <div class="card-content">
+        <div class="card-title">目录</div>
+        <div class="table-of-contents">
+          {{ post.toc|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script>
+  $(function () {
+      $('.pushpin').pushpin({
+          top: $('.pushpin').parent().offset().top,
+          offset: $('.pushpin').parent().offset().top,
+          bottom: $('.card-panel').height()
+      });
+      $('.pushpin').css({width:$('.pushpin').parent().outerWidth()});
+      $('img').materialbox();
+  })
+  </script>
+{% endblock %}

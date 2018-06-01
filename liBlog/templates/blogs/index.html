@@ -1,0 +1,53 @@
+{% extends 'blogs/blogs_base.html' %}
+{% load i18n comments %}
+{% block post %}
+  <ul class="post-list">
+    {% for post in post_list %}
+      {% get_comment_count for post as comment_count %}
+    <li class="post-list-item">
+      <article class="card z-depth-0 article-type-post">
+        <div class="post-meta">
+          <time class="post-time" >{{ post.publish_time|date:'Y-m-d'}}</time>
+          <ul class="article-category-list">
+            <li class="article-category-list-item">
+              <a class="article-category-list-link"
+                 href="{% url 'category' post.category.name %}">{{ post.category.name }}</a>
+            </li>
+          </ul>
+          <span><span>阅读</span>
+              <span class="leancloud-visitors-count">{{ post.view_count }}</span>
+          </span>
+          <span><span>评论</span>
+              <span class="leancloud-visitors-count">{{ comment_count }}</span>
+          </span>
+        </div>
+
+        <h5 class="post-title" itemprop="name">
+          <a class="post-title-link" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </h5>
+        <div class="post-content" id="post-content" itemprop="postContent">
+          {{ post.summary }}
+          <a href="{{ post.get_absolute_url }}" class="post-more waves-effect waves-button">
+            ...阅读全文
+          </a>
+        </div>
+        <div class="post-footer">
+          <ul class="article-tag-list">
+            {% for tag in post.get_tags %}
+            <li class="article-tag-list-item">
+              <a class="article-tag-list-link waves-effect waves-button"
+                 href="{% url 'tag' tag %}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+  <!-- pagination-->
+  {% include '_macro/pagination.html' %}
+{% endblock %}
+
+{% block sidebar %}
+  {% include '_macro/sidebar_index.html' %}
+{% endblock %}

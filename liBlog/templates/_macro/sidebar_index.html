@@ -1,0 +1,28 @@
+<!--侧栏-->
+<div class="sidebar">
+  <div class="card z-depth-0">
+    <div class="card-content">
+      <p><script src='//w.segmentfault.com/card/1030000004045770.js?w=0&3rd=0&bg=0&bd=0&cl=333333&btn=009a61&noBtn=0'></script></p>
+    </div>
+  </div>
+  <div class="card z-depth-0">
+    <div class="card-content">
+      <div class="card-title">
+      热门标签
+      </div>
+      {% for tag in sidbar_tag_list %}
+      <div class="chip"><a href="{% url 'tag' tag.name %}">{{ tag.name }}({{ tag.post_count }})</a></div>
+      {% endfor %}
+    </div>
+  </div>
+{#  <div class="card z-depth-0">#}
+{#    <div class="card-content">#}
+{#      <div class="card-title">#}
+{#      备用#}
+{#      </div>#}
+{#      <p>I am a very simple full width blog post. I am good at containing small bits of information. I am#}
+{#        convenient because I require little markup to use effectively.</p>#}
+{#    </div>#}
+{#  </div>#}
+  <!-- /.blog-sidebar -->
+</div>
