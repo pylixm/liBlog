@@ -145,7 +145,7 @@ TEMPLATES = [
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='mysql://root:root@localhost:3306/liBlog'),
+    'default': env.db('DATABASE_URL', default='mysql://test:test@localhost:3306/liBlog'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 

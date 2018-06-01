@@ -6,11 +6,6 @@ from .base import *  # noqa
 DEBUG = env.bool('DJANGO_DEBUG', default=True)
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
-DATABASES = {
-    'default': env.db('DATABASE_URL', default='mysql://root:root@localhost:3306/liBlog'),
-}
-DATABASES['default']['ATOMIC_REQUESTS'] = True
-
 # Only debug
 # ------------------------------------------------------------------------------
 MIDDLEWARE += [
