@@ -28,6 +28,9 @@ urlpatterns = [
 
     url(r'^search/', include('haystack.urls', namespace='haystack')),
 
+    # tutorial
+    url(r'^tutorial/', include('liBlog.tutorial.urls', namespace='tutorial')),
+
     # Your stuff: custom urls includes go here
     url(r'', include('liBlog.blogs.urls')),
 ]
