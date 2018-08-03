@@ -349,7 +349,7 @@ SITE = {
     'sub_title': """自感不善于写作，但总感觉要记录下自己这段时光。已近而立之年，
     自己却仍然混沌。那便用这“烂笔头”理顺这混沌年华吧！-- 2015-11-28 北京""",
     'publish_time': '2018-05-14 20:00:00',
-    'last_publish_time': '2018-05-31 00:00:00',
+    'last_publish_time': '2018-08-02 00:00:00',
     'keyswords': 'python django devops 运维 运维开发 salt saltstack docker 自动化',
     'description': 'python django devops 运维 运维开发 salt saltstack docker 自动化',
     'author': 'Pylixm',
