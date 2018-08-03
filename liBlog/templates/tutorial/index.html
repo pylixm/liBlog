@@ -3,7 +3,7 @@
 {% block post %}
 {% for book in book_list %}
   <div class="col s3 m3">
-    <div class="card small blue darken-1">
+    <div class="card small {{ book.bg_color }}">
       <div class="card-content white-text">
         <span class="card-title">{{ book.name }}</span>
         <p>{{ book.summary }}</p>
