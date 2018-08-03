@@ -868,4 +868,8 @@ li.tag-1 {
     font-size: 100%;
 }
 
-
+.caption {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}

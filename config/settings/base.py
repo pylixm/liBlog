@@ -135,6 +135,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+
                 # Your stuff: custom template context processors go here
             ],
         },
@@ -146,7 +147,7 @@ TEMPLATES = [
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='mysql://test:test@localhost:3306/liBlog'),
+    'default': env.db('DATABASE_URL', default='mysql://root:root@localhost:3306/liBlog'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 

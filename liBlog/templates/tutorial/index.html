@@ -1,15 +1,34 @@
-{% extends 'tutorial/base.html' %}
-{% block sidebae %}
-  <ul>
-    <li>test</li>
-    <li>test2</li>
-    <li>test3</li>
-  </ul>
-
-{% endblock  %}
+{% extends 'tutorial/tutorial_base.html' %}
 
 {% block post %}
+{% for book in book_list %}
+  <div class="col s3 m3">
+    <div class="card small blue darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">{{ book.name }}</span>
+        <p>{{ book.summary }}</p>
+      </div>
+      <div class="card-action">
+        <button onclick="go_book({{ book.id }},'{{ book.book_url }}')" class=" waves-effect waves-light btn">去学习</button>
+        <p class="white-text">已有{{ book.view_count }}人次学习</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
 
-  我是正文
+{% endblock %}
 
+{% block js %}
+<script>
+  function go_book(id, url) {
+      console.log(id, url)
+      $.post("{% url 'tutorial:tutorial_count' %}", {id:id}, function(result){
+          console.log(result)
+        if(result.status==1){
+          window.location.href=url
+        }
+      },'json');
+  }
+
+</script>
 {% endblock %}

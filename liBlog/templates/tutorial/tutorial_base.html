@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
   <div class="card-panel z-depth-0">
-    <div class="section">
+      <div class="caption">
+        教程
+      </div>
+      <div class="divider"></div>
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m3">
-          {% block sidebae %}{% endblock  %}
-        </div>
-        <div class="col s12 m9">
           {% block post %}{% endblock %}
-        </div>
       </div>
-    </div>
   </div>
 {% endblock %}
