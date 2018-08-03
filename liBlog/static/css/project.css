@@ -873,3 +873,13 @@ li.tag-1 {
     font-weight: 300;
     margin-bottom: 10px;
 }
+.notification-badge {
+    position: relative;
+    right: 5px;
+    top: -20px;
+    color: #ffffff;
+    background-color: #FF4081;
+    margin: 0 -.8em;
+    border-radius: 50%;
+    padding: 3px 4px;
+}

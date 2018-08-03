@@ -15,7 +15,9 @@
           <li><a href="{% url 'categories' %}">分类</a></li>
           <li><a href="{% url 'tags' %}">标签</a></li>
           <li><a href="{% url 'archive' %}">归档</a></li>
-          <li><a href="{% url 'tutorial:tutorial_index' %}">教程</a></li>
+          <li><a href="{% url 'tutorial:tutorial_index' %}">教程
+                <small class="notification-badge">new</small>
+          </a></li>
           <!-- <li><a href="#!">登录</a></li>-->
         </ul>
         <form class="right" action="{% url 'haystack:haystack_search' %}">
