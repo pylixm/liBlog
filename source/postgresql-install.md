@@ -12,7 +12,7 @@ tags : [postgreSQL, 数据库]
 关于`mysql`和 `postgreSQL` 的对比可见知乎的这个问题[PostgreSQL 与 MySQL 相比，优势何在？](https://www.zhihu.com/question/20010554)。
 
 看了下postgreSQL的发行版本，除了核心版本外还有针对大数据分析和虚拟化技术的分支版本，发展紧跟时代步伐，详见官方[这里](https://www.postgresql.org/download/)。对于postgreSQL的安装官方提供了许多方法，支持yum 安装、rpm安装、源码编译安装等方式。我这里采用yum 源安装，其他方式可参考[官方文档](https://www.postgresql.org/download/linux/redhat/)。安装步骤如下：
-
+<!-- more -->
 ## 准备 
 
 检查系统是否安装了postgresSQL。若安装了需要卸载，清理干净，防止造成安装时不必要的问题。

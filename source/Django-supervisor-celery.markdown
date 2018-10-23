@@ -33,7 +33,8 @@ tags : [supervisor, django, celery]
     startsecs=10
 
     stopwaitsecs=600
-    
+
+<!-- more --> 
 配置文件其他配置详解：
 ```conf
 [unix_http_server]            

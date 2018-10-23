@@ -20,7 +20,7 @@ tags : [postgreSQL, mysql, 数据库]
 - 2)#/etc/init.d/mysqld start
 - 3)#safe_mysqld&
 
-
+<!-- more -->
 ## 第一次进入数据库
 **PostgreSQL**
 ```bash

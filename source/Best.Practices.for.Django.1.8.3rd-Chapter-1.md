@@ -15,7 +15,7 @@ tags : [django]
 - Start With Django by Default
 - Be Familiar with Django's Design Philosophies
 - The Twelve-Factor App
-
+<!-- more -->
 # 第一章 代码规范
 
 ## 常规：

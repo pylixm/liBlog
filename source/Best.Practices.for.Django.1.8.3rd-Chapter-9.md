@@ -19,7 +19,7 @@ tags : [django]
 ## 在使用http的form形式来修改数据时，记得使用 csrf来保护数据。
 
 除了 http 的形式外，ajax 提交的也要使用csrf 来保护数据。
-
+<!-- more -->
 ## 理解怎么给 form 实例添加属性
 
 ```python 

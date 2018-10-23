@@ -11,7 +11,7 @@ tags : [python, pipenv]
 >Pipenv — the officially recommended Python packaging tool from Python.org, free (as in freedom).
 
 那么接下来，分享下我的试用过程，供大家参考：
-
+<!-- more -->
 ## 准备工作
 
 ### 试用环境及相关文档

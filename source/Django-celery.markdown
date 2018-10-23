@@ -19,7 +19,7 @@ tags : [django, celery, 翻译]
   - proj/urls.py
 - manage.py
 ```
-
+<!-- more -->
 建议如下方式创建celery实例。
 
 创建 proj/proj/celery.py 文件，如下：

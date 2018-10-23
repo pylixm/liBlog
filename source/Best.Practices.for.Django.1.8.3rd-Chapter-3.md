@@ -29,7 +29,7 @@ tags : [django]
   
 - `django_project_root` 本目录是django项目根目录
 - `configuration_root` django项目配置目录
-
+<!-- more -->
 ```python
 icecreamratings_project/
     .gitignore

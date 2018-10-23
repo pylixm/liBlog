@@ -13,7 +13,7 @@ Celery is our go-to task manager when working with Python. It is feature rich, s
 
 Celery’s feature set is a double edged sword though; it’s great once you got things set up, but getting there often means some amount of trial and errors. If you’re just getting started, go read “Celery Best Practices” by Deni Bertovic. Once you’re done, come back here and I’ll share a few more tips.
 
-
+<!-- more -->
 Celery 是Python开发者们常用到的一个任务管理器。它功能丰富，性能稳定，速度快，拥有清晰的接口。
 
 无论是对大批量的短期任务还是长时间运行的任务（10s+，在devo.ps 的情况下甚至几分钟（原文：even minutes in devo.ps’ case) ），

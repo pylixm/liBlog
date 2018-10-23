@@ -16,7 +16,7 @@ tags : [django]
 - 多人开发时，勿提交local settings 文件，造成配置混乱。
 
 ## 使用多分配置文件
-
+<!-- more -->
 ```python
 settings/
     __init__.py

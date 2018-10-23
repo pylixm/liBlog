@@ -10,7 +10,7 @@ tags : [salt]
 ## saltstack 架构
 
 saltstack 是基于python开发的一套 c/s架构配置管理工具。底层使用ZeraMQ消息队列的发布与订阅（pub/sub）方式通信，使用SSL证书签发的方式进行认证管理。
-
+<!-- more -->
 ## saltstack 组件
 
 ### 管理对象 Target 

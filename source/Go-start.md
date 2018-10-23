@@ -10,7 +10,7 @@ tags : [golang, 语言学习]
 
 欢迎来到 Go 编程语言指南。本指南涵盖了该语言的大部分重要特性
 Go 语言的交互式简介，它分为三节。第一节覆盖了基本语法及数据结构，第二节讨论了方法与接口， 第三节则简单介绍了 Go 的并发原语。每节末尾都有几个练习，你可以对自己的所学进行实践。 你可以 [在线学习](https://tour.go-zh.org) 或 安装到本地。
-
+<!-- more -->
 ## Go基础语法，方便查阅
 
 ### 包、变量和函数
@@ -395,7 +395,7 @@ v is of type int
 
 #### 15.常量
 
-- 常量的定义与变量类似，只不过使用 `const` 关键字。
+- 常量的定义与变量类似，只能使用 `const` 关键字。
 - 常量可以是字符、字符串、布尔或数字类型的值。
 - 常量不能使用 `:=` 语法定义。
 ```go
@@ -1781,6 +1781,7 @@ b[:n] = ""
 
 包 http 通过任何实现了 http.Handler
 的值来响应 HTTP 请求：
+
 ```go
 package http
 
@@ -1791,6 +1792,7 @@ type Handler interface {
 在这个例子中，类型 Hello实现了 http.Handler。
 访问 http://localhost:4000/ 会看到来自程序的问候。
 注意： 这个例子无法在基于 web 的指南用户界面运行。为了尝试编写 web 服务器，可能需要安装 Go。
+
 ```go
 package main
 
@@ -1817,6 +1819,7 @@ func main() {
 }
 ```
 结果：
+
 ```
 2009/11/10 23:00:00 listen tcp: Protocol not available
 ```
@@ -1824,6 +1827,7 @@ func main() {
 #### 10.图片
 Package image 定义了 Image
 接口：
+
 ```go
 package image
 
@@ -1837,6 +1841,7 @@ type Image interface {
 注意：Bounds方法的 Rectangle返回值实际上是一个 image.Rectangle， 其定义在 image包中。
 （参阅文档了解全部信息。）
 color.Color和 color.Model也是接口，但是通常因为直接使用预定义的实现 image.RGBA和 image.RGBAModel而被忽视了。这些接口和类型由image/color包定义。
+
 ```go
 package main
 
@@ -1852,10 +1857,12 @@ func main() {
 }
 ```
 结果：
+
 ```
 (0,0)-(100,100)
 0 0 0 0
 ```
+
 ### 并发
 作为语言的核心部分，Go 提供了并发的特性。
 这一部分概览了 goroutine 和 channel，以及如何使用它们来实现不同的并发模式。
@@ -1889,7 +1896,9 @@ func main() {
     say("hello")
 }
 ```
+
 结果：
+
 ```
 hello
 hello
@@ -1903,6 +1912,7 @@ hello
 ``` 
 
 #### 2.channel
+
 channel 是有类型的管道，可以用 channel 操作符 <-对其发送或者接收值。
 
 ```go

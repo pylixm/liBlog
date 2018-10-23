@@ -20,7 +20,7 @@ or directly view related 使用。
 
 - 查询对象不存在 ：ObjectDoesNotExist vs. DoesNotExist
 - 查询一个对象，返回多条时：MultipleObjectsReturned
-
+<!-- more -->
 ## 列用django orm 的惰性机制，使查询代码变的清晰、可读性更高
 
 ```python

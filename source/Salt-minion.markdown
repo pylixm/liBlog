@@ -38,7 +38,7 @@ tags : [QA, salt]
     SaltSystemExit: Invalid master key
 
 
-
+<!-- more -->
 ### 引起原因
 
 认证key的错误造成。

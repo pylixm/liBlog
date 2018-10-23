@@ -21,7 +21,7 @@ tags : [django]
 - 不同数据库的字段的类型和约束行为不同
 - Fixtures 并不是万能的解决方案。请不要使用它来迁移生产数据。
 
-
+<!-- more -->
 ## 使用 Pip 和 Virtualenv
 
 pip : python 包管理工具，方便的安装和卸载python 三方库包。

@@ -29,7 +29,7 @@ tags : [django, restfull]
     Allows access only to admin users.
 
     The IsAdminUser permission class will deny permission to any user, unless `user.is_staff` is `True` in which case permission will be allowed.
-
+<!-- more -->
 - ``IsAuthenticatedOrReadOnly`` 
 	
 	允许任何只读调用，和认证的用户调用

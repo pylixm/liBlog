@@ -13,7 +13,7 @@ tags : [django, Classview]
 
 最近有些时间，看下Classview的用法，记录下，备查。
 
-
+<!-- more -->
 ### 0x01 使用目的及优势
 
 - HTTP 方法（GET、POST 等）可以有各自的方法，而不用通过条件分支来解决。

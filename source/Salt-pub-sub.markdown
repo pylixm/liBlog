@@ -13,7 +13,7 @@ tags : [salt, 源码分析]
 1. 本代码分析基于 saltstack－2015.8 版本
 2. saltstack中大量使用了ZeroMQ，所以需要预先储备 [ZeroMQ方面的知识](http://zguide.zeromq.org/page:all)
 3. 本文以运行 `salt '*' test.ping` 场景为例研究任务的处理机制。
-
+<!-- more -->
 # 2. 概念解释
 
 Salt Client

@@ -12,7 +12,7 @@ tags : [tornado, sqlalchemy]
 web框架：tornado 4.4.2
 ORM： SQLAlchemy 1.2.0b1
 DB: MySQL 5.7
-
+<!-- more -->
 ## 问题描述
 
 我们的项目为tornado 开发的API服务，使用SQLALchemy 作为ORM与数据库做交互，SQLAlchemy我们使用了链接池的方式。代码如下：

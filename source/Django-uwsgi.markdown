@@ -41,7 +41,7 @@ tags : [QA, django]
 	spawned uWSGI worker 4 (pid: 16888, cores: 2)
 	spawned uWSGI worker 5 (pid: 16891, cores: 2)
 
-
+<!-- more -->
 导致uwsgi 启动失败。仔细查看以上日志，python 的版本为2.6，自己明明已经升级为2.7了。在命令行打印python版本也是2.7，如下：
 
 	Python 2.7.10 (default, Nov 20 2015, 19:10:34) 

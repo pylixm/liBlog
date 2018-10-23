@@ -21,7 +21,7 @@ obj["key"] != undefined
 //方法三： 
 obj.hasOwnProperty("key")  
 ```
-
+<!-- more -->
 **2、js对input的限定**
 
 ```javascript

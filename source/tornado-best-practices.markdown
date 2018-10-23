@@ -9,7 +9,7 @@ tags : [tornado, best_practices ]
 最新开发新项目一直在学习tornado的知识，在前人的基础上找了些最佳实践，记录如下，备查。
 
 tornado 新人一枚，欢迎大神拍砖~ 
-
+<!-- more -->
 ## 项目目录结构
 
 ```python

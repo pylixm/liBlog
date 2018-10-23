@@ -11,7 +11,7 @@ tags : [django, model]
 django model 的管理器 objects 允许我们自定义，这大大的扩展了model的可用性。
 
 例如，使用这个特性来软删除。设置一个状态字段，在自定义的objects 中重写 get_queryset 来过滤状态。这样以后我们使用objects来查询model 的数据时，便会自动过滤状态。
-
+<!-- more -->
 ```python
 
 from django.db import models

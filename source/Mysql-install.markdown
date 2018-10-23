@@ -30,7 +30,7 @@ tags : [mysql]
     [WinMySQLAdmin]
     D:\Program Files\MySQL\mysql-5.6.13-win32\bin\mysqld.exe
 #########################################################
-
+<!-- more -->
 
 
 3. 添加环境变量

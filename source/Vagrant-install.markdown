@@ -13,7 +13,7 @@ tags : [容器, 虚拟机]
 关于vagrant，及为什么用vagrant。大家可以去看这篇文章《[为什么要使用Vagrant](http://www.ituring.com.cn/article/131600)》,个人感觉说的比较详细。
 
 接下来，说下我的整个安装过程。
-
+<!-- more -->
 ### 一、准备工作
 ---
 

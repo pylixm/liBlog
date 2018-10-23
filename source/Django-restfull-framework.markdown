@@ -28,7 +28,7 @@ tags : [django, restfull]
 [Django-Rest-Framework 教程: 5. 提高关联性和超链接API](http://www.weiguda.com/blog/23/)
 
 [Django-Rest-Framework 教程: 6. ViewSets 和 Routers](http://www.weiguda.com/blog/24/)
-
+<!-- more -->
 ## 英文官方文档 
 
 [Django-Rest-Framework-Doc](http://www.django-rest-framework.org/)

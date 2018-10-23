@@ -24,7 +24,7 @@ tags : [QA, django, uwsgi]
     spawned uWSGI worker 7 (pid: 2356, cores: 2)
     spawned uWSGI worker 8 (pid: 2358, cores: 2)
     -- unavailable modifier requested: 0 --
-
+<!-- more -->
 ### 引起原因
 
 uwsgi 启动时，找不到python引起。使用 yum 等工具安装造成。

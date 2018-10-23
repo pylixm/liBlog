@@ -1,9 +1,9 @@
 ---
 layout : post
 title : Linux基础系列 - SSH 原理与运用
-category : Linux
+category : linux
 date : 2016-11-16 
-tags : [Linux, 运维]
+tags : [linux, 运维知识库]
 ---
 
 一直对ssh的概念比较模糊，看到阮一峰大神的博客有说明，果断转来记录备查。
@@ -15,7 +15,7 @@ SSH是每一台Linux电脑的标准配置。
 SSH具备多种功能，可以用于很多场合。有些事情，没有它就是办不成。本文是我的学习笔记，总结和解释了SSH的常见用法，希望对大家有用。
 虽然本文内容只涉及初级应用，较为简单，但是需要读者具备最基本的"Shell知识"和了解"公钥加密"的概念。如果你对它们不熟悉，
 我推荐先阅读[《UNIX / Linux 初学者教程》](http://www.ee.surrey.ac.uk/Teaching/Unix/)和[《数字签名是什么？》](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)。
-
+<!-- more -->
 ## 一、什么是SSH？
 简单说，SSH是一种网络协议，用于计算机之间的加密登录。
 如果一个用户从本地计算机，使用SSH协议登录另一台远程计算机，我们就可以认为，这种登录是安全的，即使被中途截获，密码也不会泄露。
@@ -90,6 +90,9 @@ AuthorizedKeysFile .ssh/authorized_keys
 `$ ssh user@host 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub`
 这条命令由多个语句组成，依次分解开来看：（1）"$ ssh user@host"，表示登录远程主机；（2）单引号中的mkdir .ssh && cat >> .ssh/authorized_keys，表示登录后在远程shell上执行的命令：（3）"$ mkdir -p .ssh"的作用是，如果用户主目录中的.ssh目录不存在，就创建一个；（4）'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub的作用是，将本地的公钥文件~/.ssh/id_rsa.pub，重定向追加到远程文件authorized_keys的末尾。
 写入authorized_keys文件后，公钥登录的设置就完成了。
+
+秘钥登录和免密登录：
+![](https://ws1.sinaimg.cn/large/8697aaedly1fv4ao3iar1j20ib0br3zi.jpg)
 
 ## 七、远程操作
 SSH不仅可以用于远程主机登录，还可以直接在远程主机上执行操作。

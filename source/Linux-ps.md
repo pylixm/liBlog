@@ -1,9 +1,9 @@
 ---
 layout : post
 title : Linux基础系列 - 命令ps
-category : Linux
+category : linux
 date : 2018-04-23
-tags : [Linux, 运维]
+tags : [linux, linux基础系列, 运维知识库]
 ---
 
 > 内容来自网络，由[pylixm](http://pylixm.cc)整理。
@@ -15,7 +15,7 @@ tags : [Linux, 运维]
 - UNIX 风格，选项可以组合在一起，并且选项前必须有“-”连字符
 - BSD 风格，选项可以组合在一起，但是选项前不能有“-”连字符
 - GNU 风格的长选项，选项前有两个“-”连字符
-
+<!-- more -->
 ```bash
 ps [-aAcdefHjlmNVwy][acefghLnrsSTuvxX][-C <指令名称>][-g <群组名称>]
 

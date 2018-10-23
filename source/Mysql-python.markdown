@@ -10,7 +10,7 @@ tags : [mysql,]
 ### Q & A：
 
 今天在使用python直接链接数据库时报错 `_mysql_exceptions.OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)")`
-
+<!-- more -->
 代码：
 
     db = MySQLdb.connect(host='localhost',

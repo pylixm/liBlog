@@ -14,7 +14,7 @@ tags : [virtualenv, pyenv]
 在工作开发中，一直使用 `virtualenv` 来管理python的包环境。很好的解决了不同项目使用不同python包的需求。对于多python版本的问题如何解决一直无解，虽然可以安装多个
 
 版本的python，靠绝对路径或靠创建虚拟环境的时候指定python（`virtualenv -p`）版本来解决，但总感觉不是那么的优雅。同事推荐了 `pyenv` ，一直没用过，特从网上找了些资料试着配置了下，记录如下。
-
+<!-- more -->
 ## pyenv vs virtualenv 
 
 pyenv 是针对 python 版本的管理，通过修改环境变量的方式实现；

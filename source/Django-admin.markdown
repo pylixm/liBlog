@@ -46,7 +46,7 @@ class Entry(models.Model):
         return self.headline
 
 ```
-
+<!-- more -->
 ### 类级别权限
 
 默认情况下，superuser可以访问admin界面的所有Model，但有时候只想让一些用户只能访问一些特定的Model。

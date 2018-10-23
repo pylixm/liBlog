@@ -1,3 +1,12 @@
+# Mysql
+MYSQL_DATABASE=liblog
+MYSQL_ROOT_PASSWORD=SuperCms123
+DATABASE_URL=mysql://liblog:xxx@ip:port/liblog
+
+EMAIL_PORT=587
+EMAIL_HOST_USER=20894205@qq.com
+EMAIL_HOST_PASSWORD=fhguvthpimnzcbca
+
 # PostgreSQL
 POSTGRES_PASSWORD=mysecretpass
 POSTGRES_USER=postgresuser

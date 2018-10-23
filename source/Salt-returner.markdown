@@ -13,7 +13,7 @@ SaltStack 2014.7之前, Minion端的执行结果想存储在外部系统中, 通
 使用特定的Returners还可能需要在Minion安装相关的软件包，在大规模的分布式环境中由于网络等限制，该方式可能并不能完全满足我们的需 求。
 
 Salt提供了一种可以直接在Master端将返回存储下来的机制。在Master配置文件中有master_job_cache的选项，默认就是Mysql。我们打开就可以将Job的返回结果直接存入MySQL中。
-
+<!-- more -->
 具体可查看官网介绍：http://docs.saltstack.com/en/latest/topics/jobs/external_cache.html 
 
 默认返回结果是保存到cachedir中的，保持24小时。可以使用

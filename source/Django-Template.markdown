@@ -35,7 +35,7 @@ endfor
 
 for key, value in data.items
 endfor
-    
+<!-- more -->    
 #### 循环中使用的变量
 
 `forloop.counter` 总是一个表示当前循环的执行次数的整数计数器。 

@@ -8,7 +8,7 @@ old_url : http://blog.csdn.net/wangjunji34478/article/details/35988223
 ---
  
  对于windows用户如果用Cygwin模拟unix环境的话，里面没有带curl命令，要自己装，所以建议用Gow来模拟，它已经自带了curl工具，安装后直接在cmd环境中用curl命令就可，因为路径已经自动给你配置好了。
-
+<!-- more -->
     linux curl是一个利用URL规则在命令行下工作的文件传输工具。它支持文件的上传和下载，所以是综合传输工具，但按传统，习惯称url为下载工具。
 
 　　一，curl命令参数，有好多我没有用过，也不知道翻译的对不对，如果有误的地方，还请指正。

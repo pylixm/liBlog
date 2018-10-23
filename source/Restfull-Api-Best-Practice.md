@@ -12,7 +12,7 @@ Web APIs has become an very important topic in the last year. We at M-Way Soluti
 Typically we use a RESTful design for our web APIs. The concept of REST is to separate the API structure into logical resources. There are used the HTTP methods GET, DELETE, POST and PUT to operate with the resources.
 
 These are 10 best practices to design a clean RESTful API:
-
+<!-- more -->
 ## Use nouns but no verbs
 
 For an easy understanding use this structure for every resource:

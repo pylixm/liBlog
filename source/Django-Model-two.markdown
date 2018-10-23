@@ -19,7 +19,7 @@ tags : [django,]
 - exclude():和filter相反 查找不符合条件的那些记录
 - get():获取单个复核条件的记录（没有找到或有超过一个结果都会抛出异常）
 - order_by(): 排序
-
+<!-- more -->
 **queryset的查询及符号**
 
 ```python

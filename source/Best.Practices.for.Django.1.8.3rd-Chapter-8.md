@@ -36,7 +36,7 @@ urlpatterns = [
     name="results"),
 ]
 ```
-
+<!-- more -->
 优点:
 
 - 在 views 避免了重复的代码

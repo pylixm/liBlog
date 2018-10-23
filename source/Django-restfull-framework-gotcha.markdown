@@ -13,7 +13,7 @@ tags : [django, restfull]
 在系统与外部系统以http接口的方式做交互时，发现我们使用drf（django restfreamwork）框架实现的接口数据多次调用获取到的数据值不一致。
 
 首先，我们想到的是缓存，但是经过排查，系统中并没有使用外部的缓存。那么既有可能是drf 内部有缓存机制，于是去官方文档查阅。最后找到了这样的描述：
-
+<!-- more -->
 ```python
 get_queryset(self)
 

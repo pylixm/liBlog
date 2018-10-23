@@ -24,7 +24,7 @@ tags : [django,]
 - 6、[django 相关命令总结](2016-01-29-Django-cmd.html)
 
 - 7、[Django 简单入门及最佳实践](2016-05-08-Django-tutorial.html)
-
+<!-- more -->
 ## 进阶篇
 
 - 1、[转载 - Django admin 定制案例](2016-01-05-Django-admin.html)

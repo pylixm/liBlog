@@ -34,7 +34,7 @@ remote branch
 5. 其他：
 对象是静止的，引用是动态的。
 
-
+<!-- more -->
 ## 二、操作使用
 
 ### git配置
@@ -183,7 +183,7 @@ squash:*******
 9、其他
 ```
 # 修改历史commit信息
-> git rebase -i HEAD~3
+> git rebase -i HEAD~3（3位从当前commit往前的个数）
 看到如下信息：
 pick:*******
 pick:*******
@@ -191,6 +191,43 @@ pick:*******
 如果你要修改哪个，就把那行的pick改成edit，然后退出。
 > git commit --amend
 > git rebase --continue
+
+# 合并当前分支的commit
+>git rebase -i HEAD~3 
+看到如下信息：
+pick:*******
+pick:*******
+pick:*******
+
+- Commands:
+- p, pick = git会应用这个补丁，以同样的提交信息（commit message）保存提交
+- r, reword = ugit会应用这个补丁，但需要重新编辑提交信息
+- e, edit = git会应用这个补丁，但会因为修订（amending）而终止
+- s, squash = git会应用这个补丁，但会与之前的提交合并
+- f, fixup = git会应用这个补丁，但会丢掉提交日志
+- x, exec = git会在shell中运行这个命令
+- d, drop = 直接删除该commit
+
+从以上关键字说明，我们可以看出，与之前分支合并则使用 squash 关键字。
+把rebase信息改为如下：
+pick:*******
+squash:*******
+squash:*******
+
+保存退出，会看到合并之后的所有commit的提交信息，大概如下：
+
+# This is a combination of 2 commits.
+# This is the 1st commit message:
+
+init readme
+
+# This is the commit message #2:
+
+Create CONTRIBUTING.md
+
+直接修改保存即可。注意此处的提交信心不能为空。
+
+
 
 # 查看远端和本地分支情况
 > git remote show origin

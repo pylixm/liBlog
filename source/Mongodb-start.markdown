@@ -15,7 +15,7 @@ tags : [mongodb, 启动报错]
     about to fork child process, waiting until server is ready for connections.
     forked process: 6040
     ERROR: child process failed, exited with error number 100
-
+<!-- more -->
 日志信息：
 
     2016-04-06T09:37:19.411+0200 I CONTROL  [main] ***** SERVER RESTARTED *****

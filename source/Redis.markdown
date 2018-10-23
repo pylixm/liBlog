@@ -11,7 +11,7 @@ old_url : http://www.cnblogs.com/davidgu/p/3665589.html
 mongodb和memcached不是一个范畴内的东西。mongodb是文档型的非关系型数据库，其优势在于查询功能比较强大，能存储海量数据。mongodb和memcached不存在谁替换谁的问题。
 
 和memcached更为接近的是redis。它们都是内存型数据库，数据保存在内存中，通过tcp直接存取，优势是速度快，并发高，缺点是数据类型有限，查询功能不强，一般用作缓存。在我们团队的项目中，一开始用的是memcached，后来用redis替代。
-
+<!-- more -->
 相比memcached：
 
 1、redis具有持久化机制，可以定期将内存中的数据持久化到硬盘上。

@@ -17,7 +17,7 @@ tags : [rabbitmq,]
 官方centos安装文档：[http://www.rabbitmq.com/install-rpm.html](http://www.rabbitmq.com/install-rpm.html)
 
 其他系统安装文档：[http://www.rabbitmq.com/download.html](http://www.rabbitmq.com/download.html)
-
+<!-- more -->
 ### 0x00 安装Erlang
 
 因为rabbitmq依赖Erlang，安装前需要先安装Erlang。

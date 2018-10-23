@@ -9,7 +9,7 @@ tags : [salt]
 原文地址：http://www.xiaomastack.com/2014/11/18/salt-api/
 
 salt-api也用了一段时间了，现在从安装、配置、使用三个方面梳理下知识。
-
+<!-- more -->
 ## 安装
 
 采用pip安装方便快捷，当然编译安装也很nice。

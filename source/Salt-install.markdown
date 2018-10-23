@@ -16,7 +16,7 @@ salt底层采用动态的连接总线, 使其可以用于编配, 远程执行, �
 中文文档：[http://docs.saltstack.cn/zh_CN/latest/](http://docs.saltstack.cn/zh_CN/latest/)
 
 中文社区：[http://www.saltstack.cn/](http://www.saltstack.cn/)
-
+<!-- more -->
 ### 0x00 saltstack 安装
 
 salt安装分为 master 安装和 minion 的安装。
