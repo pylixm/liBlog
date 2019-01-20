@@ -1,6 +1,6 @@
 from .base import *  # noqa
 
-
+ALLOWED_HOSTS = ['*']
 # DEBUG
 # ------------------------------------------------------------------------------
 DEBUG = env.bool('DJANGO_DEBUG', default=True)

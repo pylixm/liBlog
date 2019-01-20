@@ -51,3 +51,23 @@
 {% block sidebar %}
   {% include '_macro/sidebar_index.html' %}
 {% endblock %}
+
+{% block js %}
+<script>
+{#   WB2.anyWhere(function(W){#}
+{#      W.widget.hoverCard({#}
+{#          id : "wb_card_alone"#}
+{#      });#}
+{#    });#}
+{##}
+   WB2.anyWhere(function(W){
+    W.widget.followButton({
+        'nick_name': 'DeanWu502',  //用户昵称
+        'id': "wb_follow_btn",
+        'show_head' : true, //是否显示头像
+        'show_name' : true, //是否显示名称
+        'show_cancel': true //是否显示取消关注按钮
+    });
+});
+</script>
+{% endblock %}

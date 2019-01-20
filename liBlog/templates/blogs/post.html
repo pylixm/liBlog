@@ -25,18 +25,23 @@
   </div>
 
   <div class="post-content" id="post-content" itemprop="postContent">
-    {{  post.content|safe }}
+    {{ post.content|safe }}
   </div>
   <blockquote class="post-copyright ">
     <div class="content">
     <span class="post-time">
         最后更新时间：<time >{{ post.update_time|date:'Y-m-d H:i:s' }}</time>
-    </span><br>
+    </span>
+      <br>
         转载请保留本文链接：
-        <a href="" target="_blank" >http://pylixm.cc{{ post.get_absolute_url }}</a>
+        <a href="" target="_blank" >http://pylixm.top{{ post.get_absolute_url }}</a>
+      <br>
+      感觉本站内容不错，读后有收获！可以分享给朋友。
+      <p><a onclick="shareToWeibo('{{ post.title }}')" class="waves-effect waves-light red lighten-2 btn-small">
+        <i class="material-icons left">share</i>分享到微博</a></p>
     </div>
     <footer>
-      <a href="http://pylixm.cc">
+      <a href="http://pylixm.top">
         <img src="{{ site.author_avatar }}" alt="{{ site.author }}">
         {{ site.author }}
       </a>
@@ -50,9 +55,6 @@
           href="{% url 'tag' tag %}">{{ tag }}</a></li>
       {% endfor %}
     </ul>
-    <wb:share-button appkey="4147376535" addition="text" type="button" ralateUid="2258086637"
-                     pic="https%3A%2F%2Fwx3.sinaimg.cn%2Fsquare%2F8697aaedgy1fzdd3g68oqj2074074dg5.jpg">
-    </wb:share-button>
   </div>
 </div>
 
@@ -110,5 +112,13 @@
       $('.pushpin').css({width:$('.pushpin').parent().outerWidth()});
       $('img').materialbox();
   })
+ function shareToWeibo(title) {
+
+    var url = 'http://service.weibo.com/share/share.php?type=button&ralateUid=2258086637&language=zh_cn&appkey=4147376535&searchPic=false&style=full';
+    url = url + '&title=' + encodeURIComponent(title);
+    url = url + '&url=' + encodeURIComponent(location.href);
+    url = url + '&pic=' + encodeURIComponent('https://wx3.sinaimg.cn/square/8697aaedgy1fzdd3g68oqj2074074dg5.jpg');
+    window.open(url, 'share_pylixm_top', 'top=200,left=400,width=600,height=380,directories=no,menubar=no,toolbar=no,resizable=no');
+}
   </script>
 {% endblock %}
