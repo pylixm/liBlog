@@ -4,7 +4,7 @@
 {% load compress %}
 
 {% fill_ctx %}
-<html lang="en">
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
   <title>{% block title %}{{ site_ext.title }}{% endblock %}</title>
   <meta charset="utf-8">
@@ -50,6 +50,8 @@
 {% compress js %}
 <script src="{% static 'plugins/jQuery/jQuery-2.1.4.min.js'%}"></script>
 <script src="{% static 'plugins/materialize/js/materialize.min.js'%}"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=4147376535&debug=true"
+        type="text/javascript" charset="utf-8"></script>
 <script>
   $(function(){
     $(".sidenav").sidenav();
@@ -104,6 +106,12 @@
         }
     });
     // csrf end
+
+    WB2.anyWhere(function(W){
+      W.widget.hoverCard({
+          id : "wb_card_alone"
+      });
+    });
 
   });
 </script>
