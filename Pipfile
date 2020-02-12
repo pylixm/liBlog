@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "==1.11.5"
+Django = "==1.11.28"
 PyMySQL = "*"
 pip = "*"
 django-baker = "*"
