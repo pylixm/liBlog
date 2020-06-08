@@ -2,7 +2,7 @@
 
 一个基于Django1.11TLS版本的博客系统。自己的练手周边项目，会随时尝试新技术。
 
-线上地址: [http://demo.pylixm.top](http://demo.pylixm.top)
+线上地址: [http://pylixm.top](http://pylixm.top)
 
 开发环境：
 - python3.6
