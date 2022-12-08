@@ -4,7 +4,7 @@ argon2-cffi==16.3.0
 awesome-slugify==1.6.5
 billiard==3.3.0.23
 celery==3.1.25
-certifi==2018.1.18
+certifi==2022.12.7
 cffi==1.11.5
 chardet==3.0.4
 Cython==0.28.2
